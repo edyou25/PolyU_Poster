@@ -2,7 +2,6 @@
 
 \RequirePackage{fontawesome5}
 \RequirePackage{graphicx}
-\RequirePackage{svg}
 
 \mode<presentation>
 
@@ -67,7 +66,12 @@
     \IfFileExists{assets/polyu.png}{%
       \includegraphics[width=#1]{assets/polyu.png}%
     }{%
-      \includesvg[width=#1]{assets/polyu}%
+      \fbox{%
+        \parbox[c][0.22\paperwidth][c]{#1}{%
+          \centering
+          \bfseries\Large PolyU
+        }%
+      }%
     }%
   }%
 }
@@ -90,7 +94,8 @@
       \begin{column}{.25\paperwidth}
         \vskip4ex
         \begin{center}
-          \PolyULogoGraphic{0.8\linewidth}
+          \setlength{\fboxsep}{1.2em}%
+          \colorbox{white}{\PolyULogoGraphic{0.72\linewidth}}
         \end{center}
         \vskip2ex
       \end{column}
