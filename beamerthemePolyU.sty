@@ -2,6 +2,7 @@
 
 \RequirePackage{fontawesome5}
 \RequirePackage{graphicx}
+\RequirePackage{tikz}
 
 \mode<presentation>
 
@@ -29,7 +30,7 @@
 
 \setbeamercolor*{block body}{bg=prunel,fg=black}
 \setbeamercolor*{block title}{fg=white,bg=saclaydk}
-\setbeamerfont*{block title}{size=\large,series=\bf}
+\setbeamerfont*{block title}{size=\Large,series=\bf}
 \setbeamercolor*{block text}{fg=saclaydk,bg=vertl}
 \setbeamercolor*{example body}{bg=vertl,fg=black}
 \setbeamercolor*{example text}{fg=saclaydk,bg=vertl}
@@ -80,24 +81,20 @@
 \setbeamertemplate{headline}{
   \leavevmode
 
-  \hbox{%
-    \begin{beamercolorbox}[wd=.60\paperwidth,leftskip=.04\paperwidth,rightskip=.02\paperwidth,sep=0pt,vmode]{headline}
-      \vskip2.8ex
-      \raggedright
-      \usebeamercolor{title in headline}{\color{fg}\textbf{\Huge \inserttitle}\par}
-      \vspace{1.2ex}
-      \usebeamercolor{author in headline}{\color{fg}\Large \insertauthor\par}
-      \vspace{1.2ex}
-      \usebeamercolor{institute in headline}{\color{fg}\large \insertinstitute\par}
-      \vskip2.6ex
-    \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.32\paperwidth,rightskip=.04\paperwidth,sep=0pt,vmode]{headline}
-      \vskip2.8ex
-      \raggedleft
-      \PolyULogoGraphic{1.15\linewidth}
-      \vskip2.6ex
-    \end{beamercolorbox}%
-  }
+  \begin{beamercolorbox}[wd=.72\paperwidth,leftskip=.04\paperwidth,rightskip=0pt,sep=0pt,vmode]{headline}
+    \vskip0.8ex
+    \raggedright
+    \usebeamercolor{title in headline}{\color{fg}\textbf{\huge \inserttitle}\par}
+    \vspace{0.6ex}
+    \usebeamercolor{author in headline}{\color{fg}\Large \insertauthor\par}
+    \vspace{0.4ex}
+    \usebeamercolor{institute in headline}{\color{fg}\large \insertinstitute\par}
+    \vskip0.8ex
+  \end{beamercolorbox}%
+
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,inner sep=0pt] at ([xshift=-0.6cm,yshift=-1.0cm]current page.north east) {\PolyULogoGraphic{0.27\paperwidth}};
+  \end{tikzpicture}
 
   \begin{beamercolorbox}[wd=\paperwidth]{headline accent}
     \rule{0pt}{4pt}
@@ -130,6 +127,7 @@
 \setbeamertemplate{itemize item}{\raisebox{0.12ex}{\faSplotch}\hskip0.1em}
 \setbeamertemplate{itemize subitem}{\raisebox{0.12ex}{$\triangleright$}\hskip0.1em}
 
-\setbeamerfont{itemize/enumerate body}{size=\normalsize}
+\setbeamerfont{block body}{size=\large}
+\setbeamerfont{itemize/enumerate body}{size=\large}
 \setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
 \setbeamerfont{itemize/enumerate subsubbody}{size=\normalsize}
