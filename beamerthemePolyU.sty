@@ -15,14 +15,14 @@
 \definecolor{mandarine}{RGB}{87,88,90}
 \definecolor{bleu}{RGB}{120,120,120}
 
-\setbeamercolor{headline}{fg=white,bg=saclaydk}
-\setbeamercolor{headline logo panel}{fg=saclaydk,bg=white}
+\setbeamercolor{headline}{fg=black,bg=white}
+\setbeamercolor{headline accent}{bg=saclaydk}
 \setbeamercolor{footline}{fg=white,bg=saclaydk}
 \setbeamerfont{footline}{size=\large}
 \setbeamercolor{separation line}{bg=saclaydk}
-\setbeamercolor{title in headline}{fg=white}
-\setbeamercolor{author in headline}{fg=prunel}
-\setbeamercolor{institute in headline}{fg=white}
+\setbeamercolor{title in headline}{fg=black}
+\setbeamercolor{author in headline}{fg=black}
+\setbeamercolor{institute in headline}{fg=black}
 \setbeamercolor{framesubtitle}{fg=mandarine,bg=gray}
 \setbeamercolor{author in head/foot}{fg=white,bg=black}
 \setbeamercolor{title in head/foot}{fg=white,bg=saclaydk}
@@ -80,32 +80,26 @@
 \setbeamertemplate{headline}{
   \leavevmode
 
-  \begin{beamercolorbox}[wd=\paperwidth]{headline}
-    \begin{columns}[c]
-      \begin{column}{.05\paperwidth}
-      \end{column}
-      \begin{column}{.67\paperwidth}
-        \vskip4.2ex
-        \raggedright
-        \usebeamercolor{title in headline}{\color{fg}\textbf{\fontsize{44}{48}\selectfont \inserttitle}\par}
-        \vspace{1.2ex}
-        \usebeamercolor{author in headline}{\color{fg}\fontsize{24}{28}\selectfont \insertauthor\par}
-        \vspace{1.2ex}
-        \usebeamercolor{institute in headline}{\color{fg}\fontsize{22}{26}\selectfont \insertinstitute\par}
-        \vskip4.2ex
-      \end{column}
-      \begin{column}{.22\paperwidth}
-        \begin{beamercolorbox}[wd=\linewidth,ht=15.5ex,dp=0ex,center]{headline logo panel}
-          \vskip1.2ex
-          \PolyULogoGraphic{0.82\linewidth}
-        \end{beamercolorbox}
-      \end{column}
-      \begin{column}{.03\paperwidth}
-      \end{column}
-    \end{columns}
-  \end{beamercolorbox}
+  \hbox{%
+    \begin{beamercolorbox}[wd=.63\paperwidth,leftskip=.04\paperwidth,rightskip=.02\paperwidth,sep=0pt,vmode]{headline}
+      \vskip2.8ex
+      \raggedright
+      \usebeamercolor{title in headline}{\color{fg}\textbf{\Huge \inserttitle}\par}
+      \vspace{1.2ex}
+      \usebeamercolor{author in headline}{\color{fg}\Large \insertauthor\par}
+      \vspace{1.2ex}
+      \usebeamercolor{institute in headline}{\color{fg}\large \insertinstitute\par}
+      \vskip2.6ex
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.32\paperwidth,rightskip=.04\paperwidth,sep=0pt,vmode]{headline}
+      \vskip2.8ex
+      \raggedleft
+      \PolyULogoGraphic{1.15\linewidth}
+      \vskip2.6ex
+    \end{beamercolorbox}%
+  }
 
-  \begin{beamercolorbox}[wd=\paperwidth,bg=jaune]{lower separation line head}
+  \begin{beamercolorbox}[wd=\paperwidth]{headline accent}
     \rule{0pt}{4pt}
   \end{beamercolorbox}
 }
