@@ -16,6 +16,7 @@
 \definecolor{bleu}{RGB}{120,120,120}
 
 \setbeamercolor{headline}{fg=white,bg=saclaydk}
+\setbeamercolor{headline logo panel}{fg=saclaydk,bg=white}
 \setbeamercolor{footline}{fg=white,bg=saclaydk}
 \setbeamerfont{footline}{size=\large}
 \setbeamercolor{separation line}{bg=saclaydk}
@@ -81,31 +82,31 @@
 
   \begin{beamercolorbox}[wd=\paperwidth]{headline}
     \begin{columns}[c]
-      \begin{column}{.04\paperwidth}
+      \begin{column}{.05\paperwidth}
       \end{column}
-      \begin{column}{.63\paperwidth}
-        \vskip5ex
+      \begin{column}{.67\paperwidth}
+        \vskip4.2ex
         \raggedright
-        \usebeamercolor{title in headline}{\color{fg}\textbf{\Huge{\inserttitle}}\\[1ex]}
-        \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}
-        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}
-        \vskip5ex
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\fontsize{44}{48}\selectfont \inserttitle}\par}
+        \vspace{1.2ex}
+        \usebeamercolor{author in headline}{\color{fg}\fontsize{24}{28}\selectfont \insertauthor\par}
+        \vspace{1.2ex}
+        \usebeamercolor{institute in headline}{\color{fg}\fontsize{22}{26}\selectfont \insertinstitute\par}
+        \vskip4.2ex
       \end{column}
-      \begin{column}{.25\paperwidth}
-        \vskip4ex
-        \begin{center}
-          \setlength{\fboxsep}{1.2em}%
-          \colorbox{white}{\PolyULogoGraphic{0.72\linewidth}}
-        \end{center}
-        \vskip2ex
+      \begin{column}{.22\paperwidth}
+        \begin{beamercolorbox}[wd=\linewidth,ht=15.5ex,dp=0ex,center]{headline logo panel}
+          \vskip1.2ex
+          \PolyULogoGraphic{0.82\linewidth}
+        \end{beamercolorbox}
       \end{column}
-      \begin{column}{.04\paperwidth}
+      \begin{column}{.03\paperwidth}
       \end{column}
     \end{columns}
   \end{beamercolorbox}
 
-  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
-    \rule{0pt}{3pt}\color{saclaydk}
+  \begin{beamercolorbox}[wd=\paperwidth,bg=jaune]{lower separation line head}
+    \rule{0pt}{4pt}
   \end{beamercolorbox}
 }
 
