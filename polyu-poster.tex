@@ -3,6 +3,8 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usefonttheme{serif} % Use serif fonts for an academic look
+\usepackage{mathptmx} % Times New Roman font
 \usepackage{amsmath,amsthm,amssymb,latexsym}
 \usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter}
 \usepackage{graphicx}
@@ -12,7 +14,7 @@
 
 \boldmath
 
-\title{\huge Research Poster Title}
+\title{Research Poster Title}
 \author{Author One \and Author Two \and Author Three}
 \institute[]{Department Name, Faculty/School Name, The Hong Kong Polytechnic University}
 
@@ -23,7 +25,7 @@
  
 \begin{columns}[t]
 
-    \begin{column}{.4\textwidth}
+    \begin{column}{.48\textwidth}
     \begin{block}{Overview}
     This poster template has been adapted for The Hong Kong Polytechnic University. Replace the placeholder text with your project summary, key claims, and contact details.
 
@@ -72,10 +74,10 @@
 	\end{block}
 	  
 	\end{column}
-	
+    \hspace{0.02\textwidth}
 % ---------------------------------------------------------%
 
-    \begin{column}{.4\textwidth}	
+    \begin{column}{.48\textwidth}	
 	\begin{exampleblock}{Research Highlights}
 	\lipsum[3]
 	\end{exampleblock}

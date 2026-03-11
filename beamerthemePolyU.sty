@@ -7,18 +7,18 @@
 \mode<presentation>
 
 \definecolor{jaune}{RGB}{220,180,60}
-\definecolor{saclaydk}{RGB}{158,35,53}
+\definecolor{saclaydk}{RGB}{166,25,46} % PolyU Red
 \definecolor{saclayl}{RGB}{236,219,222}
 \definecolor{prunel}{RGB}{242,232,234}
 \definecolor{vertl}{RGB}{231,234,236}
 \definecolor{vert}{RGB}{87,88,90}
-\definecolor{rouge}{RGB}{158,35,53}
+\definecolor{rouge}{RGB}{166,25,46} % PolyU Red
 \definecolor{mandarine}{RGB}{87,88,90}
 \definecolor{bleu}{RGB}{120,120,120}
 
 \setbeamercolor{headline}{fg=white,bg=saclaydk}
 \setbeamercolor{footline}{fg=white,bg=saclaydk}
-\setbeamerfont{footline}{size=\large,series=\sf}
+\setbeamerfont{footline}{size=\large}
 \setbeamercolor{separation line}{bg=saclaydk}
 \setbeamercolor{title in headline}{fg=white}
 \setbeamercolor{author in headline}{fg=prunel}
@@ -43,6 +43,7 @@
 
 \setbeamertemplate{itemize items}[triangle]
 \setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded]
 
 \setbeamertemplate{block begin}{
   \vskip.75ex
@@ -75,7 +76,7 @@
   \leavevmode
 
   \begin{beamercolorbox}[wd=\paperwidth]{headline}
-    \begin{columns}[T]
+    \begin{columns}[c]
       \begin{column}{.04\paperwidth}
       \end{column}
       \begin{column}{.63\paperwidth}
@@ -84,43 +85,39 @@
         \usebeamercolor{title in headline}{\color{fg}\textbf{\Huge{\inserttitle}}\\[1ex]}
         \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}
         \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}
+        \vskip5ex
       \end{column}
       \begin{column}{.25\paperwidth}
         \vskip4ex
         \begin{center}
-          \PolyULogoGraphic{0.9\linewidth}
+          \PolyULogoGraphic{0.8\linewidth}
         \end{center}
         \vskip2ex
       \end{column}
       \begin{column}{.04\paperwidth}
       \end{column}
     \end{columns}
-    \vskip2ex
   \end{beamercolorbox}
 
   \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
-    \rule{0pt}{3pt}
+    \rule{0pt}{3pt}\color{saclaydk}
   \end{beamercolorbox}
 }
 
 \setbeamertemplate{footline}{
- \setbeamercolor{coloredboxstuff}{fg=white,bg=saclaydk}
   \leavevmode%
-  \begin{beamercolorbox}[ht=4ex,leftskip=1em,rightskip=1em]{coloredboxstuff}%
-  \begin{center}
-\rule{0pt}{2.5cm}
-\end{center}
-
+  \begin{beamercolorbox}[wd=\paperwidth,ht=6ex,dp=3ex,leftskip=2em,rightskip=2em]{footline}%
+    \usebeamercolor{footline}%
+    \large\bfseries
     \faEnvelope \; your.email@polyu.edu.hk
     \hfill
     The Hong Kong Polytechnic University
     \hfill
     \faGlobe \; www.polyu.edu.hk
-    \vskip1ex
   \end{beamercolorbox}
   \vskip0pt%
   \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
-    \rule{0pt}{3pt}
+    \rule{0pt}{3pt}\color{saclaydk}
   \end{beamercolorbox}
 }
 
